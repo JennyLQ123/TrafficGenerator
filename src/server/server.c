@@ -125,6 +125,7 @@ int main(int argc, char *argv[])
             free(sockfd_ptr);
             error("Error: create pthread");
         }
+        pthread_detach(serv_thread);    //release thread when the task is completed
     }
 
     return 0;
